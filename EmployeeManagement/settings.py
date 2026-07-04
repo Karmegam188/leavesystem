@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-%g_i=g#u9k(aq7)_xd8m)zkd^)z-*y@*67#vibjq50r=e8=d20
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # ✅ APPLICATIONS
 INSTALLED_APPS = [
@@ -89,6 +89,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # ✅ LOGIN
 LOGIN_URL = '/login/'
@@ -98,3 +99,4 @@ AUTH_USER_MODEL = 'accounts.User'
 
 # ✅ DEFAULT PK
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
